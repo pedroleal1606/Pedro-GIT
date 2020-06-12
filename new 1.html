@@ -1,0 +1,81 @@
+<meta charset="UTF-8">
+<script>
+
+var anoAtual = 2020;
+var anoInicial = 1500;
+
+function pulaLinha() {
+
+document.write("<br>")
+
+}
+
+
+
+function mostra(frase) {
+
+document.write(frase)
+
+}
+
+function calculaImc(peso,altura) {
+
+var imc = peso / (altura * altura)
+return imc
+
+}
+
+var nome = prompt("Qual o seu nome?")
+var idade = prompt(nome + ", Qual a sua idade?")
+var peso = parseFloat(prompt(nome + ", Qual o seu peso? ( Número quebrado por favor usar ponto)"))
+var altura = parseFloat(prompt(nome + ", Qual a sua altura? ( Número quebrado por favor usar ponto)"));
+
+
+var imcPedro = calculaImc(peso,altura)
+
+mostra(nome + " seu IMC com " + idade + " anos é de " + imcPedro);
+pulaLinha();
+
+if (imcPedro >= 18.50 && imcPedro <= 24.99) {
+
+mostra(nome + " seu IMC está normal, continue assim")
+
+}
+
+if (imcPedro < 17) {
+
+mostra(nome + " seu IMC está muito baixo, ganhe muita massa corporal")
+
+}
+
+if (imcPedro >= 17 && imcPedro <= 18.49) {
+
+mostra(nome + " seu IMC está baixo, ganhe um pouco de massa corporal")
+
+}
+
+if (imcPedro >= 25 && imcPedro <= 29.99) {
+
+mostra(nome + " seu IMC está um pouco alto, perca um pouco de massa corporal")
+
+}
+
+if (imcPedro >= 30 && imcPedro <= 34.99) {
+
+mostra(nome + " seu IMC esta alto, você esta classificado como obesidade nivel 1, perca mais massa corporal")
+
+}
+
+if (imcPedro >= 35 && imcPedro <= 39.99) {
+
+mostra(nome + " seu IMC esta muito alto, você está classificado como obesidade nivel 2(severa), perca muita massa corporal")
+
+}
+
+if (imcPedro >= 40) {
+
+mostra(nome + " seu IMC está extremamente alto, você esta classificado como obesidade nivel 3(mórbida), proure um médico e um nutricionista")
+
+}
+
+</script>
